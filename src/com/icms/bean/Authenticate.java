@@ -28,12 +28,12 @@ public class Authenticate {
 					while(rs!=null && rs.next())
 					{
 						String id=rs.getString("username");
-						String paswd=rs.getString("password");
+						String pwd=rs.getString("password");
 						if(username.equalsIgnoreCase(id))
 						{
-							if(paswd.equals(password))
+							if(pwd.equals(password))
 							{
-								System.out.println("hello"+username+"<br>"+"whats the order");
+								System.out.println("Hello"+username+"<br>");
 								authentication_status=true;
 							}
 							

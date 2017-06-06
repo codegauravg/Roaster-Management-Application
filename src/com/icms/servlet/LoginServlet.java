@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
 		if(result){
 		
 				request.getSession().setAttribute("username", Username);
-				response.sendRedirect("success.jsp");
+				response.sendRedirect("employee.jsp");
 				
 			}
 			
