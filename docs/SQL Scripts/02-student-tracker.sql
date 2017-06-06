@@ -44,7 +44,8 @@ INSERT INTO `employees` VALUES
 (1002,'John','Doe','john@cris.com'),
 (1003,'Ajay','Rao','ajay@cris.com'),
 (1004,'Gaurav','Gunjan','codegauravg@gmail.com'),
-(1005,'Pradeep','Singh','pradeep@cris.com');
+(1005,'Pradeep','Singh','pradeep@cris.com'),
+(1006,'Geetika','Luthra','geetu.luthra95@gmail.com');
 /*!40000 ALTER TABLE `employees` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

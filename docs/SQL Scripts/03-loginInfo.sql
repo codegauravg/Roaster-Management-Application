@@ -1,8 +1,9 @@
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `loginInfo` (
-  `id` int(20) NOT NULL AUTO_INCREMENT,
-  `username` varchar(45) DEFAULT NULL,
-  `password` varchar(20) DEFAULT NULL,
+  `id` int(20) NOT NULL,
+  `username` varchar(45) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `role` varchar(8) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -14,12 +15,12 @@ CREATE TABLE `loginInfo` (
 LOCK TABLES `loginInfo` WRITE;
 /*!40000 ALTER TABLE `loginInfo` DISABLE KEYS */;
 INSERT INTO `loginInfo` VALUES 
-(1001,'dilipjain@cris.com','12345'),
-(1002,'john@cris.com','12345'),
-(1003,'ajay@cris.com','12345'),
-(1004,'codegauravg@gmail.com','00000'),
-(1005,'pradeep@cris.com','12345'),
-(1006,'geetu.luthra95@gmail.com','00000');
+(1001,'dilipjain@cris.com','12345','Employee'),
+(1002,'john@cris.com','12345','Employee'),
+(1003,'ajay@cris.com','12345','Employee'),
+(1004,'codegauravg@gmail.com','00000','Admin'),
+(1005,'pradeep@cris.com','12345','Employee'),
+(1006,'geetu.luthra95@gmail.com','00000','Admin');
 /*!40000 ALTER TABLE `loginInfo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
