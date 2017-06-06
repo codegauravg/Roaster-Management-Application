@@ -59,7 +59,7 @@
         <div class="row">
             <div class="col-md-6 col-sm-12">
             	<h2>Sign in</h2>
-				 <form class="form-inline" action="/ICMSRoaster/LoginServlet" method ="post">
+				 <form class="form-inline" action="/ICMSRoaster/Login" method ="post">
 					  <div class="form-group">
 					    <label for="email">User Id/Employee Id:</label>
 					    <input type="email" class="form-control" id="email" placeholder="Enter Username" name="username">
