@@ -22,9 +22,9 @@ public class Authenticate {
 		  
 			try{
 					Class.forName("com.mysql.jdbc.Driver");
-					Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","icms","12345");
+					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/icms_employees","root","admin");
 					Statement st = con.createStatement();
-					ResultSet rs = st.executeQuery("select * from entries ");
+					ResultSet rs = st.executeQuery("select * from loginInfo ");
 					while(rs!=null && rs.next())
 					{
 						String id=rs.getString("username");
