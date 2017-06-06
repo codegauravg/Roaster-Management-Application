@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import com.icms.bean.Authentication;
 
 /**
@@ -25,7 +26,7 @@ public class Login extends HttpServlet {
 		Authentication loginservice=new Authentication();
 		boolean result=loginservice.authenticate(Username, Password);
 		System.out.println(result);
-		if(result){
+		if(result==true){
 
 				request.getSession().setAttribute("username", Username);
 				response.sendRedirect("employee.jsp");
@@ -33,8 +34,7 @@ public class Login extends HttpServlet {
 			}
 
 		else{
-			System.out.print(result);
-			response.sendRedirect("login.jsp");
+			response.sendRedirect("404.jsp");
 
 		}
    }

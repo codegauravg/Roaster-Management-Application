@@ -59,19 +59,22 @@
         <div class="row">
             <div class="col-md-6 col-sm-12">
             	<h2>Sign in</h2>
-				 <form class="form-inline" action="/ICMSRoaster/Login" method ="post">
+				 <form role="form" class="form-inline" action="/icmsRoaster/Login" method ="post">
 					  <div class="form-group">
-					    <label for="email">User Id/Employee Id:</label>
-					    <input type="email" class="form-control" id="email" placeholder="Enter Username" name="username">
+					    <label for="username">User Id/Employee Id:</label>
+					    <input type="email" class="form-control" id="username" placeholder="Enter Username" name="username">
 					  </div>
 					  <div class="form-group">
-					    <label for="pwd">Password:</label>
-					    <input type="password" class="form-control" id="pwd" type="password"  placeholder="Password" name="password">
+					    <label for="password">Password:</label>
+					    <input type="password" class="form-control" id="password" type="password"  placeholder="Password" name="password">
 					  </div>
 					  <div class="checkbox">
 					    <label><input type="checkbox"> Remember me</label>
 					  </div>
-					  <button type="submit" class="btn btn-success" value="Login">Submit</button>
+					  <div>
+					  	<button type="submit" class="btn btn-success" value="Employee">Submit</button>
+					  	<a type="button" class="btn btn-default" href="/icmsRoaster/Forgotpassword.jsp">Forgot password</a>
+					  </div>
 				</form>
             </div>
         </div>
