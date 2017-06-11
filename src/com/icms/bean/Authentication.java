@@ -22,7 +22,29 @@ public class Authentication extends HttpServlet {
 	private DataSource dataSource;
 		
 	boolean authentication_status=false;
+	
+	public String checkrole(String username){
+	String role="";
+	try{
+		Class.forName("com.mysql.jdbc.Driver");  
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/icms_employees?autoReconnect=true&useSSL=false","root","admin");  
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery("select * from loginInfo");
+			while(rs!=null && rs.next())
+			{
+				String id=rs.getString("username");
+				if(username.equalsIgnoreCase(id))
+					role=rs.getString("role");
+			}
 
+		} catch(Exception e) {
+		System.out.println(e.getMessage());
+		e.printStackTrace();
+		}
+	
+	return role;
+   }
+	
 	public boolean authenticate(String username,String password)
 
 		{
@@ -42,9 +64,10 @@ public class Authentication extends HttpServlet {
 						ResultSet rs = st.executeQuery("select * from loginInfo");
 						while(rs!=null && rs.next())
 						{
-							System.out.println(rs.getString("username"));
+							//System.out.println(rs.getString("username"));
 							String id=rs.getString("username");
 							String pwd=rs.getString("password");
+							String role=rs.getString("role");
 							if(username.equalsIgnoreCase(id))
 							{
 								if(pwd.equals(password))

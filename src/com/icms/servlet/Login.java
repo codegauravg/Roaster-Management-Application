@@ -27,10 +27,20 @@ public class Login extends HttpServlet {
 		boolean result=loginservice.authenticate(Username, Password);
 		System.out.println(result);
 		if(result==true){
+				String r=loginservice.checkrole(Username);
+				if(r.equalsIgnoreCase("Admin"))
+				{
+					request.getSession().setAttribute("username", Username);
+					response.sendRedirect("admin.jsp");
 
-				request.getSession().setAttribute("username", Username);
-				response.sendRedirect("employee.jsp");
+				}
+				else
+				{
+					request.getSession().setAttribute("username", Username);
+					response.sendRedirect("employee.jsp");
 
+				}
+				
 			}
 
 		else{

@@ -91,7 +91,7 @@
             <!-- Page Heading -->
             <div class="row" id="main" >
                 <div class="col-sm-12 col-md-12 well" id="content">
-                    <h3>Welcome Admin!</h3>
+                    <h3>Welcome Employee!</h3>
                 </div>
             </div>
             <!-- /.row -->
