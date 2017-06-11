@@ -1,6 +1,7 @@
 package com.icms.bean;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
@@ -34,11 +35,14 @@ public class Authentication extends HttpServlet {
 			{
 
 				try{
-						Connection con = dataSource.getConnection();;
+					Class.forName("com.mysql.jdbc.Driver");  
+					Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/icms_employees?autoReconnect=true&useSSL=false","root","admin");  
+						//Connection con = dataSource.getConnection();;
 						Statement st = con.createStatement();
 						ResultSet rs = st.executeQuery("select * from loginInfo");
 						while(rs!=null && rs.next())
 						{
+							System.out.println(rs.getString("username"));
 							String id=rs.getString("username");
 							String pwd=rs.getString("password");
 							if(username.equalsIgnoreCase(id))
@@ -53,7 +57,8 @@ public class Authentication extends HttpServlet {
 						}
 
 				} catch(Exception e) {
-					System.out.println(e.getMessage());
+					System.out.println("hi... i got this error "+e.getMessage());
+					e.printStackTrace();
 				}
 
 		    }
