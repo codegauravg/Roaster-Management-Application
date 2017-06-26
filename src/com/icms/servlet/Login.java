@@ -20,9 +20,11 @@ public class Login extends HttpServlet {
 	
 		String Username,Password,Role;
 		response.setContentType("text/html");
+		System.out.println("in login sevlet");
 		Username=request.getParameter("username");
 		Password=request.getParameter("password");
-
+		System.out.println(Username);
+		System.out.println(Password);
 		Authentication loginservice=new Authentication();
 		boolean result=loginservice.authenticate(Username, Password);
 		System.out.println(result);
