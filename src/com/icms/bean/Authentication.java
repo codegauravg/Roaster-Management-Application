@@ -17,10 +17,6 @@ import javax.sql.DataSource;
 public class Authentication extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	//Define Data Source/connection pool for Resource Injection.
-	@Resource(name="jdbc/icms_employees")
-	private DataSource dataSource;
-		
 	boolean authentication_status=false;
 	
 	public String checkrole(String username){

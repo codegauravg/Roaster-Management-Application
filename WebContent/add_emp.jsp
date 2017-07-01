@@ -93,20 +93,11 @@
                 <div class="col-sm-12 col-md-12 well" id="content">
                     <h3>Add Employees</h3>
                     <hr>
-                      <form class="form-horizontal">
+                    <form class="form-horizontal" action="/icmsRoaster/AddEmployee" method ="post">
 					  <div class="form-group">
-					    <label class="control-label col-sm-2" for="emp_id">Employee ID:</label>
+					    <label class="control-label col-sm-2" for="username">Email:</label>
 					    <div class="col-sm-10">
-					    <div class="row">
-					      <button type="submit" class="btn btn-warning">Generate ID</button>
-					      <input type="text" class="form-control" id="emp_id" placeholder="Generate ID">
-					    </div>
-					    </div>
-					  </div>
-					  <div class="form-group">
-					    <label class="control-label col-sm-2" for="email">Email:</label>
-					    <div class="col-sm-10">
-					      <input type="email" class="form-control" id="email" placeholder="Enter email">
+					      <input type="email" class="form-control" id="username" placeholder="Enter email">
 					    </div>
 					  </div>
 					  <div class="form-group">
@@ -118,18 +109,29 @@
 					  <div class="form-group">
 					    <label class="control-label col-sm-2" for="first_name">First Name:</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="first_name" placeholder="Enter First Name">
+					      <input type="text" class="form-control" id="f_name" placeholder="Enter First Name">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label class="control-label col-sm-2" for="last_name">Last Name:</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="last_name" placeholder="Enter Last Name">
+					      <input type="text" class="form-control" id="l_name" placeholder="Enter Last Name">
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label class="control-label col-sm-2" for="role">Role</label>
+					    <div class="col-sm-10">
+					      <div class="radio">
+							  <label><input type="radio" id="role" name="role">Manager</label>
+							</div>
+							<div class="radio">
+							  <label><input type="radio" id="role" name="role">Employee</label>
+							</div>
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <div class="col-sm-offset-2 col-sm-10">
-					      <button type="submit" class="btn btn-success">Submit</button>
+					      <button type="submit" class="btn btn-success" value="Add Employee"></button>
 					    </div>
 					  </div>
 					</form> 
