@@ -25,27 +25,34 @@ DROP TABLE IF EXISTS `employees`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `employees` (
-  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `id` int(20) NOT NULL AUTO_INCREMENT ,
   `first_name` varchar(45) DEFAULT NULL,
   `last_name` varchar(45) DEFAULT NULL,
-  `email` varchar(45) DEFAULT NULL,
+  `username` varchar(45) DEFAULT NULL,
+  `password` varchar(20) NOT NULL,
+  `role` varchar(8) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+ALTER TABLE `employees` AUTO_INCREMENT=1000;
 --
 -- Dumping data for table `student`
 --
 
 LOCK TABLES `employees` WRITE;
 /*!40000 ALTER TABLE `employees` DISABLE KEYS */;
-INSERT INTO `employees` VALUES 
-(1001,'Dilip','Jain','dilipjain@cris.com'),
-(1002,'John','Doe','john@cris.com'),
-(1003,'Ajay','Rao','ajay@cris.com'),
-(1004,'Gaurav','Gunjan','codegauravg@gmail.com'),
-(1005,'Pradeep','Singh','pradeep@cris.com'),
-(1006,'Geetika','Luthra','geetu.luthra95@gmail.com');
+INSERT INTO `employees`(`first_name`,
+  `last_name`,
+  `username`,
+  `password`,
+  `role`) VALUES 
+('Dilip','Jain','dilipjain@cris.com','12345','Employee'),
+('John','Doe','john@cris.com','12345','Employee'),
+('Ajay','Rao','ajay@cris.com','12345','Employee'),
+('Gaurav','Gunjan','codegauravg@gmail.com','00000','Admin'),
+('Pradeep','Singh','pradeep@cris.com','12345','Employee'),
+('Geetika','Luthra','geetu.luthra95@gmail.com','00000','Admin');
 /*!40000 ALTER TABLE `employees` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

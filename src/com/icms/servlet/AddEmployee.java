@@ -9,13 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.icms.bean.Register;
 
-/**
- * Servlet implementation class AddEmployee
- */
-@WebServlet("/AddEmployee")
-public class AddEmployee extends HttpServlet {
+public class AddEmployee extends HttpServlet{
+	
 	private static final long serialVersionUID = 1L;
-       
+    
     // TODO Add Employee into the database.
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -65,5 +62,6 @@ public class AddEmployee extends HttpServlet {
    }
 		
 	
+
 
 }

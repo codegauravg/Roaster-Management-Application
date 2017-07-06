@@ -17,6 +17,10 @@ import javax.sql.DataSource;
 public class Authentication extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	//Define Data Source/connection pool for Resource Injection.
+	@Resource(name="jdbc/icms_employees")
+	private DataSource dataSource;
+		
 	boolean authentication_status=false;
 	
 	public String checkrole(String username){
@@ -25,7 +29,7 @@ public class Authentication extends HttpServlet {
 		Class.forName("com.mysql.jdbc.Driver");  
 		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/icms_employees?autoReconnect=true&useSSL=false","root","admin");  
 			Statement st = con.createStatement();
-			ResultSet rs = st.executeQuery("select * from loginInfo");
+			ResultSet rs = st.executeQuery("select * from employees");
 			while(rs!=null && rs.next())
 			{
 				String id=rs.getString("username");
@@ -57,7 +61,7 @@ public class Authentication extends HttpServlet {
 					Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/icms_employees?autoReconnect=true&useSSL=false","root","admin");  
 						//Connection con = dataSource.getConnection();;
 						Statement st = con.createStatement();
-						ResultSet rs = st.executeQuery("select * from loginInfo");
+						ResultSet rs = st.executeQuery("select * from employees");
 						while(rs!=null && rs.next())
 						{
 							//System.out.println(rs.getString("username"));

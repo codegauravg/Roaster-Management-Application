@@ -73,7 +73,7 @@
                     <a href="investigaciones/favoritas"><i class="fa fa-fw fa-star"></i>  View Roaster</a>
                 </li>
                 <li>
-                    <a href="investigaciones/favoritas"><i class="fa fa-fw fa-user-plus"></i>  Add/Modify Employee</a>
+                    <a href="add_emp.jsp"><i class="fa fa-fw fa-user-plus"></i>  Add/Modify Employee</a>
                 </li>
                 <li>
                     <a href="sugerencias"><i class="fa fa-fw fa-paper-plane-o"></i> Acknowledge Leave</a>
