@@ -95,12 +95,15 @@
                     <hr>
                       <form class="form-horizontal">
 					  <div class="form-group">
-					    <label class="control-label col-sm-2" for="emp_id">Employee ID:</label>
+					    <label class="control-label col-sm-2" for="first_name">First Name:</label>
 					    <div class="col-sm-10">
-					    <div class="row">
-					      <button type="submit" class="btn btn-warning">Generate ID</button>
-					      <input type="text" class="form-control" id="emp_id" placeholder="Generate ID">
+					      <input type="text" class="form-control" id="first_name" placeholder="Enter First Name">
 					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label class="control-label col-sm-2" for="last_name">Last Name:</label>
+					    <div class="col-sm-10">
+					      <input type="text" class="form-control" id="last_name" placeholder="Enter Last Name">
 					    </div>
 					  </div>
 					  <div class="form-group">
@@ -115,18 +118,7 @@
 					      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
 					    </div>
 					  </div>
-					  <div class="form-group">
-					    <label class="control-label col-sm-2" for="first_name">First Name:</label>
-					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="first_name" placeholder="Enter First Name">
-					    </div>
-					  </div>
-					  <div class="form-group">
-					    <label class="control-label col-sm-2" for="last_name">Last Name:</label>
-					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="last_name" placeholder="Enter Last Name">
-					    </div>
-					  </div>
+					  
 					  <div class="form-group">
 					    <div class="col-sm-offset-2 col-sm-10">
 					      <button type="submit" class="btn btn-success">Submit</button>
