@@ -93,29 +93,29 @@
                 <div class="col-sm-12 col-md-12 well" id="content">
                     <h3>Add Employees</h3>
                     <hr>
-                      <form class="form-horizontal">
+                      <form class="form-horizontal" action="/icmsRoaster/AddEmployee" method ="post">
 					  <div class="form-group">
 					    <label class="control-label col-sm-2" for="first_name">First Name:</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="first_name" placeholder="Enter First Name">
+					      <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter First Name">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label class="control-label col-sm-2" for="last_name">Last Name:</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="last_name" placeholder="Enter Last Name">
+					      <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter Last Name">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label class="control-label col-sm-2" for="email">Email:</label>
 					    <div class="col-sm-10">
-					      <input type="email" class="form-control" id="email" placeholder="Enter email">
+					      <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label class="control-label col-sm-2" for="pwd">Password:</label>
 					    <div class="col-sm-10">
-					      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+					      <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter password">
 					    </div>
 					  </div>
 					  

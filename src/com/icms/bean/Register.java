@@ -22,7 +22,7 @@ public class Register {
 				Class.forName("com.mysql.jdbc.Driver");  
 				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/icms_employees?autoReconnect=true&useSSL=false","root","admin");  
 				Statement st = con.createStatement();
-				ResultSet rs = st.executeQuery("select * from ");
+				ResultSet rs = st.executeQuery("select * from employees ");
 				while(rs!=null && rs.next())
 				{
 					String id=rs.getString("username");
@@ -46,7 +46,7 @@ public class Register {
 			Class.forName("com.mysql.jdbc.Driver");  
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/icms_employees?autoReconnect=true&useSSL=false","root","admin");  
 			Statement st = con.createStatement();
-			st.executeUpdate("insert into entries values('"+username+"','"+pwd+"','"+f_name+"','"+l_name+"',S'"+role+"')");
+			st.executeUpdate("insert into `employees`(`first_name`,`last_name`,`username`,`password`,`role`) VALUES('"+f_name+"','"+l_name+"','"+username+"','"+pwd+"','"+role+"')");
 			registration_success=true;
 			st.close();
 		    con.close();
