@@ -37,7 +37,7 @@ CREATE TABLE `employees` (
 
 ALTER TABLE `employees` AUTO_INCREMENT=1000;
 --
--- Dumping data for table `student`
+-- Dumping data for table `employees`
 --
 
 LOCK TABLES `employees` WRITE;
